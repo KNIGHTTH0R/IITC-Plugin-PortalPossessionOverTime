@@ -1,12 +1,10 @@
 // ==UserScript==
-// @id             iitc-plugin-distance-to-portal@jonatkins
-// @name           IITC plugin: Distance to portal
+// @id             iitc-plugin-portalpossessionovertime
+// @name           IITC plugin: Portal Possession over Time
 // @category       Portal Info
-// @version        0.1.1.20150917.154202
-// @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://secure.jonatkins.com/iitc/release/plugins/distance-to-portal.meta.js
-// @downloadURL    https://secure.jonatkins.com/iitc/release/plugins/distance-to-portal.user.js
-// @description    [jonatkins-2015-09-17-154202] Allows your current location to be set manually, then shows the distance to the selected portal. Useful when managing portal keys.
+// @version        0.0.1
+// @namespace      https://github.com/eisterman/IITC-Plugin-PortalPossessionOverTime
+// @description    Allow you to know who interacted with a portal over time from Chat Reports
 // @include        https://www.ingress.com/intel*
 // @include        http://www.ingress.com/intel*
 // @match          https://www.ingress.com/intel*
@@ -22,15 +20,6 @@
 function wrapper(plugin_info) {
 // ensure plugin framework is there, even if iitc is not yet loaded
 if(typeof window.plugin !== 'function') window.plugin = function() {};
-
-//PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
-//(leaving them in place might break the 'About IITC' page or break update checks)
-plugin_info.buildName = 'jonatkins';
-plugin_info.dateTimeVersion = '20150917.154202';
-plugin_info.pluginId = 'distance-to-portal';
-//END PLUGIN AUTHORS NOTE
-
-
 
 // PLUGIN START ////////////////////////////////////////////////////////
 
